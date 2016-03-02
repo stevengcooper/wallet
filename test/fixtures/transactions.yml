@@ -2,12 +2,12 @@
 
 one:
   payee: MyString
-  amount: 1.5
+  amount: 16.00
   date: 2016-03-02 15:32:30
   account_type: MyString
 
 two:
   payee: MyString
-  amount: 1.5
+  amount: 4.00
   date: 2016-03-02 15:32:30
   account_type: MyString

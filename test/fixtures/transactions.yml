@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  payee: MyString
+  payee: Criterian
   amount: 16.00
   date: 2016-03-02 15:32:30
-  account_type: MyString
+  account_type: debit
 
 two:
-  payee: MyString
+  payee: Store
   amount: 4.00
-  date: 2016-03-02 15:32:30
-  account_type: MyString
+  date: 2016-01-02 15:32:30
+  account_type: credit

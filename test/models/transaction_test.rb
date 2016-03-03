@@ -29,4 +29,12 @@ class TransactionTest < ActiveSupport::TestCase
   test "total transactions last month" do
     assert_equal 1, Transaction.processes_last_month
   end
+
+  test "can find the biggest expense ever" do
+    assert_equal 16.00, Transaction.biggest_expense
+  end
+
+  test "can find the biggest expense from the current month" do
+    assert_equal 16.00, Transaction.biggest_expense_this_month
+  end
 end

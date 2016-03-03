@@ -38,6 +38,28 @@ class Transaction < ActiveRecord::Base
     total.length
   end
 
+  def self.biggest_expense
+    all_amounts = self.all.map {|m| m.amount}
+    all_amounts.max
+  end
+
+
+  def self.biggest_expense_this_month
+     biggest_expense_this_month = []
+     self.all.each do |t|
+       biggest_expense_this_month << t.amount if (Time.now.mon == t.date.mon)
+     end
+     biggest_expense_this_month.max
+   end
+  # def self.biggest_expense_current_month
+  #   self.all.each do |n|
+  #     if n.date.mon == Time.now.mon
+  #       all_amounts = self.all.map {|m| m.amount}
+  #       all_amounts.sort
+  #       all_amounts[-1]
+  #     end
+  #   end
+  # end
 
   #
   # def self.most_spent_with

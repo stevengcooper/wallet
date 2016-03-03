@@ -1,0 +1,14 @@
+<h1> Meet your wallet! <h1>
+
+  <div class="balance">
+    <p>Your balance is: <%= number_to_currency(@balance) %> </p>
+  </div>
+
+  <div class="total_transactions">
+    <p>Your total transactions are: <%= @count_processes %> </p>
+  </div>
+
+  <div class="checkout">
+  <%= link_to 'New Transaction', new_transaction_path(@transactions) %>
+  </div>
+  

@@ -1,10 +1,15 @@
 class TransactionsController < ApplicationController
   before_action :set_transaction, only: [:show, :edit, :update, :destroy]
 
+  def dashboard
+    @balance = Transaction.display_balance
+    @count_processes = Transaction.count_processes
+  end
   # GET /transactions
   # GET /transactions.json
   def index
     @transactions = Transaction.all
+
   end
 
   # GET /transactions/1

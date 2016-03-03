@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+50.times do
+  Transaction.create(payee: "Faker::Company.name", amount: Faker::Number.decimal(2), date: Faker::Date.backward(80), account_type: "credit")
+end

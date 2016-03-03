@@ -17,4 +17,12 @@ class TransactionTest < ActiveSupport::TestCase
   test "can tell how much money you spent this month" do
     assert_equal 20.00, Transaction.spent_this_month
   end
+
+  test "can tell how much you spent last month" do
+    assert_equal 4.00, Transaction.spent_last_month
+  end
+
+  test "total transactions for this month" do
+    assert_equal 2, Transaction.processes_this_month
+  end
 end

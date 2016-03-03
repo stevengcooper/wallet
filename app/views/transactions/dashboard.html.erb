@@ -8,5 +8,9 @@
     <p>Your total transactions are: <%= @count_processes %> </p>
   </div>
 
+  <div class="total_this_month">
+    <p>Your total amount spent this month is: <%= @spent_this_month %> </p>
+  </div>
+
 <p>  <%= link_to 'New Transaction', new_transaction_path %></p>
 <p>  <%= link_to 'Transactions', transactions_path %></p>

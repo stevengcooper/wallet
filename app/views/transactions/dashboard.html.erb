@@ -17,6 +17,10 @@
   </div>
 
   <div class="total_this_month">
+    <p><%= @account_status %> </p>
+  </div>
+
+  <div class="total_this_month">
     <p>Your total amount spent last month is: <%= @spent_last_month %> </p>
   </div>
 
@@ -38,6 +42,3 @@
 
 <p>  <%= link_to 'New Transaction', new_transaction_path %></p>
 <p>  <%= link_to 'Transactions', transactions_path %></p>
-
-
- 

@@ -37,4 +37,8 @@ class TransactionTest < ActiveSupport::TestCase
   test "can find the biggest expense from the current month" do
     assert_equal 16.00, Transaction.biggest_expense_this_month
   end
+
+  test 'determines whether account is possitive or negative' do
+    assert_equal "Your account is in good standing.", Transaction.account_status
+  end
 end

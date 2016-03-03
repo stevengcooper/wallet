@@ -11,6 +11,7 @@ class TransactionsController < ApplicationController
     @processes_this_month = Transaction.spent_this_month
     @spent_last_month = Transaction.spent_this_month
     @spent_this_month = Transaction.spent_this_month
+    @account_status = Transaction.account_status
   end
   # GET /transactions
   # GET /transactions.json

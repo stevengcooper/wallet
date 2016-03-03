@@ -57,4 +57,12 @@ class Transaction < ActiveRecord::Base
     end
     credit - debit
   end
+
+  def self.account_status
+    if self.display_balance > 0.0
+      p "Your account is in good standing."
+    else
+      p "PUT MONEY IN YOUR ACCOUNT! IT IS OVERDRAWN!"
+    end
+  end
 end

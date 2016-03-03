@@ -29,13 +29,8 @@ class Transaction < ActiveRecord::Base
   end
 
   def self.processes_this_month
-    total= 0
-      self.all.each do |i|
-        if (i.date.mon == Time.now.mon)
-         total_for_month = total + 1
-        end
-      end
-    total_for_month
+    total = self.all.select {|d| d.date.mon == Time.now.mon}
+    total.length
   end
 
 

@@ -25,4 +25,8 @@ class TransactionTest < ActiveSupport::TestCase
   test "total transactions for this month" do
     assert_equal 2, Transaction.processes_this_month
   end
+
+  test "total transactions last month" do
+    assert_equal 1, Transactions.processes_last_month
+  end
 end

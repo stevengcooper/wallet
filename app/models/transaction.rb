@@ -33,6 +33,11 @@ class Transaction < ActiveRecord::Base
     total.length
   end
 
+  def self.processes_last_month
+    total = self.all.select {|d| d.date.mon == Time.now.mon - 1}
+    total.length
+  end
+
 
   #
   # def self.most_spent_with

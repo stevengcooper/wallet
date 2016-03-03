@@ -1,9 +1,5 @@
 class Transaction < ActiveRecord::Base
 
-  def self.display_balance
-    self.all.reduce(0.0) {|n,m| n + m.amount}
-  end
-
   def self.count_processes
     self.distinct.count('date')
   end
@@ -51,4 +47,14 @@ class Transaction < ActiveRecord::Base
      end
      biggest_expense_this_month.max
    end
+
+   def self.display_balance
+    credit = 0.0
+    debit = 0.0
+    self.all.each do |i|
+      credit += i.amount if i.account_type == "credit"
+      debit += i.amount if i.account_type == "debit"
+    end
+    credit - debit
+  end
 end

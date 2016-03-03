@@ -4,6 +4,7 @@ class TransactionsController < ApplicationController
   def dashboard
     @balance = Transaction.display_balance
     @count_processes = Transaction.count_processes
+    @spent_this_month = Transaction.spent_this_month
   end
   # GET /transactions
   # GET /transactions.json

@@ -3,11 +3,17 @@
 one:
   payee: Criterian
   amount: 16.00
-  date: 2016-03-02 15:32:30
+  date: 2016-03-03 15:32:30
   account_type: debit
 
 two:
   payee: Store
   amount: 4.00
   date: 2016-01-02 15:32:30
+  account_type: credit
+
+three:
+  payee: Store
+  amount: 4.00
+  date: 2016-03-03 15:32:30
   account_type: credit

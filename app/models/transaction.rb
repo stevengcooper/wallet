@@ -8,11 +8,23 @@ class Transaction < ActiveRecord::Base
     self.distinct.count('date')
   end
 
+  def self.spent_this_month
+     total_for_month = 0
+     self.all.each do |i|
+       if (i.date.mon == Time.now.mon)
+         total_for_month += i.amount
+       end
+     end
+     total_for_month
+  end
+
+
+
+  #
   # def self.most_spent_with
-  #   takers = {}
-  #   self.each do |m|
-  #     if takers.include?(m.name)
-  #     end
+  #
+  #
+  #
   #
   # end
 

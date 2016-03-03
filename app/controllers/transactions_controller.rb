@@ -5,6 +5,12 @@ class TransactionsController < ApplicationController
     @balance = Transaction.display_balance
     @count_processes = Transaction.count_processes
     @spent_this_month = Transaction.spent_this_month
+    @biggest_expense_this_month = Transaction.spent_this_month
+    @biggest_expense = Transaction.spent_this_month
+    @processes_last_month = Transaction.spent_this_month
+    @processes_this_month = Transaction.spent_this_month
+    @spent_last_month = Transaction.spent_this_month
+    @spent_this_month = Transaction.spent_this_month
   end
   # GET /transactions
   # GET /transactions.json

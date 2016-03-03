@@ -51,22 +51,4 @@ class Transaction < ActiveRecord::Base
      end
      biggest_expense_this_month.max
    end
-  # def self.biggest_expense_current_month
-  #   self.all.each do |n|
-  #     if n.date.mon == Time.now.mon
-  #       all_amounts = self.all.map {|m| m.amount}
-  #       all_amounts.sort
-  #       all_amounts[-1]
-  #     end
-  #   end
-  # end
-
-  #
-  # def self.most_spent_with
-  #
-  #
-  #
-  #
-  # end
-
 end
